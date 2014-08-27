@@ -1,0 +1,29 @@
+<?php 
+function login_register_forgotpwd_menu(){
+	$items['user_login'] = array(
+			// page title
+			'title' => '',
+			// describe the page for the menu system.  site visitors will not see this
+			'description' => 'Simple custom hook_menu() implementation.',
+			// function that is called when visiting the new path
+			'page callback' => 'login_register_forgot_password_page',
+			// permissions required to view page
+			'access arguments' => array('access content'),
+	);
+	return $items;
+}
+
+function login_register_forgot_password_page()
+{
+	return theme('login_reg_forgotpassword_template');
+}
+
+function login_register_forgotpwd_theme() {
+	//$module_path = drupal_get_path('module', 'login_register_forgotpwd');
+	return array(
+			'login_reg_forgotpassword_template' => array(
+					// file name will be custom-page.tpl.php
+					'template' => 'page-user',
+			),
+	);
+}

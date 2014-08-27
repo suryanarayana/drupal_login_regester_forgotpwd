@@ -1,0 +1,5 @@
+name = Login Register ForgotPassword
+description = Login, Registration and ForgotPasswords are in same page 
+core = 7.x
+package = LRF
+version = 7.x
